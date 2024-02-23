@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rice Type Detection</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Rice Type Detection</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="{{ url_for('details') }}">Predict</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content container">
+        <h1>Welcome to Rice Type Detection</h1><br>
+        <p>This model can detect rice type based on rice images.</p>
+        <a href="{{ url_for('details') }}"><button>Predict</button></a>
+    </div>
+</body>
+</html>
+

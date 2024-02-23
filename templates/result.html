@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rice Type Classification</title>
+    <link rel="stylesheet" href="/static/style2.css">
+</head>
+<body>
+
+<header>
+    <h1>RICE TYPE CLASSIFICATION</h1>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="{{ url_for('details') }}">Predict</a></li> 
+        </ul> 
+    </nav> 
+</header>
+
+<main> 
+   <!-- Results Section -->
+   <section id="results">
+       <h2>Results</h2><br><br>
+       <p>Based on the image given as input, the Al model has predicted that there is a high possibility for your rice is of type:</p><br><br>
+       <section id="prediction-result">
+        {% if prediction_text %}
+            <h3>{{ prediction_text }}</h3>
+        {% endif %}
+    </section>
+   </section>
+</main>
+
+</body>
+</html>
